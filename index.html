@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="Logo.jpeg" />
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>ARTIA | Inteligencia Cooperativa</title>
+    <meta name="description"
+        content="Automatizamos tu empresa con inteligencia artificial, pero los resultados los aseguramos con personas." />
+</head>
+
+<body>
+
+    <!-- Estrellas de fondo -->
+    <div class="stars" id="stars"></div>
+
+    <!-- ========== Navbar ========== -->
+    <nav id="nav">
+        <a href="#inicio" class="logo-wrap">
+            <img src="Logo.jpeg" alt="ARTIA">
+            <span class="logo-text">ARTIA</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#inicio" class="active">Inicio</a></li>
+            <li><a href="#problema">Soluciones</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#metodo">Método</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <button class="menu-btn" onclick="abrirMenu()" aria-label="Menú">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+        </button>
+    </nav>
+
+    <!-- ========== Sidebar movil ========== -->
+    <div class="overlay" id="overlay" onclick="cerrarMenu()"></div>
+    <aside class="sidebar" id="sidebar">
+        <button class="sidebar-close" onclick="cerrarMenu()">✕ Cerrar</button>
+        <a href="#inicio" onclick="cerrarMenu()">Inicio</a>
+        <a href="#problema" onclick="cerrarMenu()">Problema</a>
+        <a href="#servicios" onclick="cerrarMenu()">Servicios</a>
+        <a href="#metodo" onclick="cerrarMenu()">Método</a>
+        <a href="#contacto" onclick="cerrarMenu()">Contacto</a>
+    </aside>
+
+    <!-- ========== Hero ========== -->
+    <section id="inicio">
+        <div class="video-bg">
+            <video id="heroVideo" autoplay muted playsinline>
+                <source src="Artia.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="video-overlay"></div>
+        <div class="grid-lines"></div>
+        <div class="hero-content">
+            <div class="hero-badge" data-aos="fade-up" data-aos-duration="800">
+                <span class="badge-dot"></span>
+                Centro de Soluciones Empresariales
+            </div>
+            <h1 class="hero-title">
+                <span class="t1" data-aos="fade-up" data-aos-duration="1000">Convierte tu empresa en</span>
+                <span class="t2" data-aos="fade-up" data-aos-duration="1200">un sistema que sí vende</span>
+            </h1>
+            <p class="hero-sub" data-aos="fade-up" data-aos-duration="1400">
+                Implementamos <strong>IA + equipo humano</strong> para automatizar tu negocio, organizar tus procesos y
+                escalar tus resultados sin perder el control.
+            </p>
+            <div class="hero-btns" data-aos="fade-up" data-aos-duration="1600">
+                <a href="#contacto" class="btn-primary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    Quiero automatizar mi empresa
+                </a>
+                <a href="https://wa.me/573151715841" target="_blank" class="btn-outline">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+                    </svg>
+                    Hablar con un asesor
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Problema ========== -->
+    <section id="problema">
+        <div class="sec-header">
+            <div class="sec-tag" data-aos="fade-up" data-aos-duration="800">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="8" x2="12" y2="12" />
+                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
+                El problema real
+            </div>
+            <h2 class="sec-title" data-aos="fade-up" data-aos-duration="900">¿Te suena familiar?</h2>
+            <p class="sec-sub" data-aos="fade-up" data-aos-duration="1000">Muchas empresas trabajan más de lo necesario
+                porque no tienen un sistema. El problema no es el esfuerzo — es la estructura.</p>
+        </div>
+        <div class="pain-grid">
+            <div class="pain-card" data-aos="fade-up" data-aos-duration="900">
+                <div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg></div>
+                <div>
+                    <h4>Leads sin respuesta</h4>
+                    <p>Los clientes potenciales llegan pero nadie los atiende a tiempo y se pierden solos.</p>
+                </div>
+            </div>
+            <div class="pain-card" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+                <div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="2" x2="12" y2="22" />
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                    </svg></div>
+                <div>
+                    <h4>Ventas que se escapan</h4>
+                    <p>Sin procesos claros, las oportunidades se van antes de convertirse en plata.</p>
+                </div>
+            </div>
+            <div class="pain-card" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+                <div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" />
+                        <line x1="8" y1="21" x2="16" y2="21" />
+                        <line x1="12" y1="17" x2="12" y2="21" />
+                    </svg></div>
+                <div>
+                    <h4>Empresa desorganizada</h4>
+                    <p>Cada área trabaja por su cuenta sin flujos ni comunicación que funcione de verdad.</p>
+                </div>
+            </div>
+            <div class="pain-card" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+                <div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                    </svg></div>
+                <div>
+                    <h4>Tiempo tirado a la basura</h4>
+                    <p>Tu equipo gasta horas en tareas que se podrían automatizar en minutos.</p>
+                </div>
+            </div>
+        </div>
+        <div class="pain-bottom" data-aos="zoom-in" data-aos-duration="1000">
+            <p class="pain-msg">
+                <svg style="width:1.1rem;height:1.1rem;vertical-align:middle;margin-right:.3rem;color:#f87171"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="15" y1="9" x2="9" y2="15" />
+                    <line x1="9" y1="9" x2="15" y2="15" />
+                </svg>
+                No necesitas más herramientas. Necesitas un <strong>sistema.</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- ========== Solucion ========== -->
+    <section id="solucion" style="background: rgba(5,3,20,.6)">
+        <div class="sec-header">
+            <div class="sec-tag" data-aos="fade-up" data-aos-duration="800">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                La solución ARTIA
+            </div>
+            <h2 class="sec-title" data-aos="fade-up" data-aos-duration="900">Automatización que realmente funciona</h2>
+            <p class="sec-sub" data-aos="fade-up" data-aos-duration="1000">Automatizamos tu empresa con inteligencia
+                artificial, pero los resultados los aseguramos con personas.</p>
+        </div>
+        <div class="sol-grid">
+            <div class="sol-card" data-aos="fade-up" data-aos-duration="900">
+                <div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3" />
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                        <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
+                    </svg></div>
+                <h3>Automatización Inteligente</h3>
+                <p>Quitamos las tareas manuales y repetitivas para que tu equipo se enfoque en lo que importa.</p>
+            </div>
+            <div class="sol-card" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
+                <div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6" />
+                        <polyline points="8 6 2 12 8 18" />
+                    </svg></div>
+                <h3>Procesos Estructurados</h3>
+                <p>Armamos flujos claros para cada área, desde que entra un lead hasta que cierra la venta.</p>
+            </div>
+            <div class="sol-card" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+                <div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                    </svg></div>
+                <h3>Equipo Humano Real</h3>
+                <p>La IA ejecuta pero las personas convierten. Nuestros closers aseguran que cada lead se vuelva
+                    cliente.</p>
+            </div>
+        </div>
+        <div class="sol-quote" data-aos="fade-up" data-aos-duration="1000">
+            <p>"Creamos un sistema que trabaja por ti, pero con personas que aseguran los resultados."</p>
+        </div>
+    </section>
+
+    <!-- ========== Como funciona ========== -->
+    <section id="como">
+        <div class="sec-header">
+            <div class="sec-tag" data-aos="fade-up" data-aos-duration="800">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                </svg>
+                El proceso
+            </div>
+            <h2 class="sec-title" data-aos="fade-up" data-aos-duration="900">Cómo funciona ARTIA</h2>
+            <p class="sec-sub" data-aos="fade-up" data-aos-duration="1000">Simple y sin complicaciones. Así es como
+                transformamos tu negocio.</p>
+        </div>
+        <div class="steps">
+            <div class="step" data-aos="fade-right" data-aos-duration="900">
+                <div class="step-n">1</div>
+                <div class="step-body">
+                    <h4>Analizamos tu empresa</h4>
+                    <p>Hacemos un diagnóstico completo de tus procesos, equipo y oportunidades de mejora.</p>
+                </div>
+            </div>
+            <div class="step" data-aos="fade-right" data-aos-duration="900" data-aos-delay="100">
+                <div class="step-n">2</div>
+                <div class="step-body">
+                    <h4>Automatizamos lo que te roba tiempo</h4>
+                    <p>Identificamos las tareas que más tiempo consumen y las automatizamos con herramientas
+                        profesionales.</p>
+                </div>
+            </div>
+            <div class="step" data-aos="fade-right" data-aos-duration="900" data-aos-delay="200">
+                <div class="step-n">3</div>
+                <div class="step-body">
+                    <h4>Integramos IA real</h4>
+                    <p>Chatbots, contenido inteligente, páginas web y sistemas que trabajan solos las 24 horas.</p>
+                </div>
+            </div>
+            <div class="step" data-aos="fade-right" data-aos-duration="900" data-aos-delay="300">
+                <div class="step-n">4</div>
+                <div class="step-body">
+                    <h4>Activamos el equipo humano</h4>
+                    <p>Nuestros closers toman el control del seguimiento y convierten los leads en clientes reales.</p>
+                </div>
+            </div>
+            <div class="step" data-aos="fade-right" data-aos-duration="900" data-aos-delay="400">
+                <div class="step-n">5</div>
+                <div class="step-body">
+                    <h4>Escalamos los resultados</h4>
+                    <p>Medimos, ajustamos y crecemos. Tu empresa escala con datos reales y estrategia humana.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Servicios ========== -->
+    <section id="servicios">
+        <div class="sec-header">
+            <div class="sec-tag" data-aos="fade-up" data-aos-duration="800">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7" />
+                    <rect x="14" y="3" width="7" height="7" />
+                    <rect x="14" y="14" width="7" height="7" />
+                    <rect x="3" y="14" width="7" height="7" />
+                </svg>
+                Lo que hacemos
+            </div>
+            <h2 class="sec-title" data-aos="fade-up" data-aos-duration="900">Nuestros Servicios</h2>
+            <p class="sec-sub" data-aos="fade-up" data-aos-duration="1000">Todo con herramientas profesionales y de
+                primer nivel. No usamos cualquier cosa.</p>
+        </div>
+        <div class="srv-grid">
+
+            <!-- Servicio 01 — Chatbots -->
+            <div class="srv-card" data-aos="fade-up" data-aos-duration="900">
+                <img src="Chatbot.jpeg" alt="Chatbot IA - ARTIA" class="srv-flyer">
+                <div class="srv-tag">Servicio 01</div>
+                <h3>
+                    <svg class="srv-h-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 8V4H8" />
+                        <rect x="4" y="8" width="16" height="12" rx="2" />
+                        <path d="M2 14h2" />
+                        <path d="M20 14h2" />
+                        <path d="M15 13v2" />
+                        <path d="M9 13v2" />
+                    </svg>
+                    Chatbots con Inteligencia Artificial
+                </h3>
+                <p>Tu empresa respondiendo clientes 24/7 sin contratar más personal. El bot hace el trabajo, tú recibes
+                    los clientes listos para comprar.</p>
+                <ul class="srv-list">
+                    <li>Responde WhatsApp automáticamente</li>
+                    <li>Atiende clientes las 24 horas sin parar</li>
+                    <li>Envía info de productos y toma pedidos</li>
+                    <li>Más ventas sin más empleados</li>
+                    <li>Respuesta inmediata — cero tiempos de espera</li>
+                    <li>Reducción de costos operativos reales</li>
+                </ul>
+            </div>
+
+            <!-- Servicio 02 — Contenido -->
+            <div class="srv-card" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
+                <img src="Contenido.jpeg" alt="Creación de Contenido Inteligente - ARTIA" class="srv-flyer">
+                <div class="srv-tag">Servicio 02</div>
+                <h3>
+                    <svg class="srv-h-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="23 7 16 12 23 17 23 7" />
+                        <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                    </svg>
+                    Creación de Contenido Inteligente
+                </h3>
+                <p>Contenido que vende, hecho con IA profesional. Videos, copy, guiones y estrategia de contenido para
+                    que tu marca siempre esté activa y generando clientes.</p>
+                <ul class="srv-list">
+                    <li>Videos automatizados con IA</li>
+                    <li>Avatares digitales profesionales</li>
+                    <li>Copy y guiones listos para vender</li>
+                    <li>Estrategia de contenido escalable</li>
+                    <li>Consistencia sin depender de un equipo grande</li>
+                </ul>
+            </div>
+
+            <!-- Servicio 03 — Paginas Web -->
+            <div class="srv-card" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+                <img src="Pagina.jpeg" alt="Páginas Web Inteligentes - ARTIA" class="srv-flyer">
+                <div class="srv-tag">Servicio 03</div>
+                <h3>
+                    <svg class="srv-h-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="2" y1="12" x2="22" y2="12" />
+                        <path
+                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                    </svg>
+                    Páginas Web Inteligentes
+                </h3>
+                <p>Tu página web vendiendo 24/7. No necesitas solo una página bonita — necesitas una máquina de ventas
+                    que trabaje como un vendedor sin descanso.</p>
+                <ul class="srv-list">
+                    <li>Diseño profesional que convierte visitas en clientes</li>
+                    <li>Integración directa con WhatsApp</li>
+                    <li>Chatbot IA integrado en la página</li>
+                    <li>Formularios inteligentes</li>
+                    <li>Optimizada para ventas automáticas</li>
+                    <li>Imagen profesional que genera confianza</li>
+                </ul>
+            </div>
+
+            <!-- Servicio 04 — Automatizacion -->
+            <div class="srv-card" data-aos="fade-up" data-aos-duration="900">
+                <div class="srv-tag">Servicio 04</div>
+                <h3>
+                    <svg class="srv-h-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3" />
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                    </svg>
+                    Automatización Empresarial
+                </h3>
+                <p>Ordenamos y automatizamos los procesos internos de tu negocio. Desde la operación diaria hasta el
+                    flujo completo de cada cliente.</p>
+                <ul class="srv-list">
+                    <li>Procesos internos automatizados</li>
+                    <li>Flujo de clientes sin fricción</li>
+                    <li>Organización operativa completa</li>
+                    <li>Se integra con lo que ya tienes</li>
+                </ul>
+            </div>
+
+            <!-- Diferencial — Ventas Humano -->
+            <div class="srv-card diferencial" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
+                <div class="diff-badge">
+                    <svg style="width:.9rem;height:.9rem;vertical-align:middle;margin-right:.2rem" viewBox="0 0 24 24"
+                        fill="currentColor" stroke="none">
+                        <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    DIFERENCIAL ARTIA
+                </div>
+                <h3>
+                    <svg class="srv-h-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                    </svg>
+                    Sistema de Ventas Humano
+                </h3>
+                <p>La IA abre la puerta. Nosotros cerramos la venta. Closers reales que convierten leads en clientes que
+                    pagan, sin robots que asusten.</p>
+                <ul class="srv-list">
+                    <li>Closers profesionales en tu equipo</li>
+                    <li>Seguimiento real y personalizado</li>
+                    <li>Conversión de leads cualificados</li>
+                    <li>Asesoría directa sin intermediarios</li>
+                </ul>
+            </div>
+
+            <!-- Servicio 05 — Capacitacion -->
+            <div class="srv-card" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+                <div class="srv-tag">Servicio 05</div>
+                <h3>
+                    <svg class="srv-h-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                        <polyline points="17 6 23 6 23 12" />
+                    </svg>
+                    Capacitación y Escalamiento
+                </h3>
+                <p>No solo implementamos — formamos a tu equipo para que el sistema siga funcionando. Estrategia
+                    continua para escalar mes a mes sin depender de nosotros.</p>
+                <ul class="srv-list">
+                    <li>Formación de tu equipo interno</li>
+                    <li>Optimización mes a mes</li>
+                    <li>Estrategia de crecimiento real</li>
+                    <li>Reportes y métricas claras</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="flyer-showcase" data-aos="zoom-in" data-aos-duration="1000">
+            <img src="Flyer Servicios.jpeg" alt="Todos los servicios de ARTIA" class="flyer-showcase-img">
+        </div>
+    </section>
+
+    <!-- ========== Videos con IA ========== -->
+    <section id="videos-ia">
+        <div class="sec-header">
+            <div class="sec-tag" data-aos="fade-up" data-aos-duration="800">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polygon points="23 7 16 12 23 17 23 7" />
+                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                </svg>
+                Contenido generado con IA
+            </div>
+            <h2 class="sec-title" data-aos="fade-up" data-aos-duration="900">Videos Con IA</h2>
+            <p class="sec-sub" data-aos="fade-up" data-aos-duration="1000">Así se ve el contenido profesional creado
+                con inteligencia artificial. Videos reales hechos para empresas como la tuya.</p>
+        </div>
+        <div class="videos-grid">
+            <div class="video-card" data-aos="fade-up" data-aos-duration="900">
+                <div class="video-card-inner">
+                    <video muted playsinline loop controls>
+                        <source src="Artia.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-card-label">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 3 19 12 5 21 5 3" />
+                        </svg>
+                        Video 1
+                        <span>IA + Producción</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-card" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
+                <div class="video-card-inner">
+                    <video muted playsinline loop controls>
+                        <source src="Artia 2.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-card-label">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 3 19 12 5 21 5 3" />
+                        </svg>
+                        Video 2
+                        <span>IA + Producción</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-card" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+                <div class="video-card-inner">
+                    <video muted playsinline loop controls>
+                        <source src="Artia 3.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-card-label">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 3 19 12 5 21 5 3" />
+                        </svg>
+                        Video 3
+                        <span>IA + Producción</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Metodo 5F ========== -->
+    <section id="metodo">
+        <div class="sec-header">
+            <div class="sec-tag" data-aos="fade-up" data-aos-duration="800">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                Nuestro método
+            </div>
+            <h2 class="sec-title" data-aos="fade-up" data-aos-duration="900">Método ARTIA 5F</h2>
+            <p class="sec-sub" data-aos="fade-up" data-aos-duration="1000">Un sistema propio que nos posiciona como
+                solución completa. Cada F es un pilar del crecimiento de tu empresa.</p>
+        </div>
+        <div class="metodo-wrap">
+            <div class="metodo-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="0">
+                <div class="m-circle">F1</div>
+                <div class="m-title">Flujo</div>
+                <div class="m-desc">Ordenamos el negocio desde adentro</div>
+            </div>
+            <div class="metodo-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="150">
+                <div class="m-circle">F2</div>
+                <div class="m-title">Funnel</div>
+                <div class="m-desc">Embudos que realmente convierten</div>
+            </div>
+            <div class="metodo-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                <div class="m-circle">F3</div>
+                <div class="m-title">Función IA</div>
+                <div class="m-desc">Automatizamos con IA profesional</div>
+            </div>
+            <div class="metodo-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="450">
+                <div class="m-circle">F4</div>
+                <div class="m-title">Fuerza Humana</div>
+                <div class="m-desc">Ventas reales con personas de verdad</div>
+            </div>
+            <div class="metodo-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
+                <div class="m-circle">F5</div>
+                <div class="m-title">Fase de Escala</div>
+                <div class="m-desc">Crecimiento sostenido y medible</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Diferencial ========== -->
+    <section id="diferencial" style="background: rgba(10,10,26,.5)">
+        <div class="diff-layout">
+            <div class="diff-left" data-aos="fade-right" data-aos-duration="1000">
+                <h2>No somos una agencia más.<br><span>Somos tu sistema de crecimiento.</span></h2>
+                <p>Mientras otras agencias te venden una herramienta suelta, ARTIA te entrega un ecosistema completo:
+                    tecnología, procesos y personas trabajando juntos para que tu empresa escale de verdad.</p>
+                <div class="diff-quote-box" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+                    "La tecnología ejecuta, las personas convierten."
+                </div>
+            </div>
+            <div class="diff-items">
+                <div class="diff-row no" data-aos="fade-left" data-aos-duration="800">
+                    <div class="diff-icon">
+                        <svg style="width:1.2rem;height:1.2rem;color:#f87171" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="15" y1="9" x2="9" y2="15" />
+                            <line x1="9" y1="9" x2="15" y2="15" />
+                        </svg>
+                    </div>
+                    <p>Agencia de marketing tradicional</p>
+                </div>
+                <div class="diff-row no" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+                    <div class="diff-icon">
+                        <svg style="width:1.2rem;height:1.2rem;color:#f87171" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="15" y1="9" x2="9" y2="15" />
+                            <line x1="9" y1="9" x2="15" y2="15" />
+                        </svg>
+                    </div>
+                    <p>Empresa de bots sin estrategia real</p>
+                </div>
+                <div class="diff-row no" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <div class="diff-icon">
+                        <svg style="width:1.2rem;height:1.2rem;color:#f87171" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="15" y1="9" x2="9" y2="15" />
+                            <line x1="9" y1="9" x2="15" y2="15" />
+                        </svg>
+                    </div>
+                    <p>Productora de contenido aislada</p>
+                </div>
+                <div class="diff-row yes" data-aos="fade-left" data-aos-duration="800" data-aos-delay="350">
+                    <div class="diff-icon">
+                        <svg style="width:1.2rem;height:1.2rem;color:#6366f1" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <p><strong>Sistema completo de crecimiento empresarial</strong></p>
+                </div>
+                <div class="diff-row yes" data-aos="fade-left" data-aos-duration="800" data-aos-delay="450">
+                    <div class="diff-icon">
+                        <svg style="width:1.2rem;height:1.2rem;color:#6366f1" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <p>IA profesional + equipo humano de cierre</p>
+                </div>
+                <div class="diff-row yes" data-aos="fade-left" data-aos-duration="800" data-aos-delay="550">
+                    <div class="diff-icon">
+                        <svg style="width:1.2rem;height:1.2rem;color:#6366f1" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <p>Automatización sin perder el control</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Frases ========== -->
+    <section id="frases">
+        <div class="marquee" id="marquee"></div>
+    </section>
+
+    <!-- ========== Contacto ========== -->
+    <section id="contacto">
+        <div class="cta-box" data-aos="zoom-in" data-aos-duration="1000">
+            <h2 data-aos="fade-up" data-aos-duration="900">
+                Agenda tu
+                <span
+                    style="background: linear-gradient(135deg,#6366f1,#a855f7); -webkit-background-clip:text; -webkit-text-fill-color:transparent">
+                    diagnóstico gratuito
+                </span>
+            </h2>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                Habla con un humano. Empieza a escalar. Sin compromisos, sin robots, sin rodeos.
+            </p>
+            <div class="cta-btns" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <a href="https://wa.me/573151715841" target="_blank" class="btn-primary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+                    </svg>
+                    WhatsApp: 3151715841
+                </a>
+                <a href="#servicios" class="btn-outline">Ver todos los servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Footer ========== -->
+    <footer>
+        <p><span>ARTIA</span> — Inteligencia Cooperativa.</p>
+        <p style="margin-top:.4rem; font-size:.75rem">Automatizamos sin perder el control · De negocio improvisado a
+            sistema escalable.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
